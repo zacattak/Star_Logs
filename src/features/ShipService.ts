@@ -15,12 +15,14 @@ export const shipsApi = Axios.create({
 class StarshipService {
     async getStarships() {
         const response = await fetch(shipsStore.baseUrl)
+
         const ships = await response.json()
         shipsStore.ships = ships
     }
 
     async getStarship(starshipId: string) {
         const response = await api.get(`api/starships/${starshipId}`);
+
         shipsStore.activeStarship = response.data
         // Handle Fetching crew and logs
     }

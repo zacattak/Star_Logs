@@ -2,7 +2,7 @@ import { action, makeAutoObservable } from "mobx"
 import { isValidProp } from "../utils/isValidProp"
 import { Starship } from './Starship'
 class ShipsStore {
-    baseUrl = 'https://sandbox.codeworksacademy.com/api/cars'
+    baseUrl = 'https://sandbox.codeworksacademy.com/api/starships'
     ships: Starship[] = []
     activeStarship: Starship | null = null;
 
