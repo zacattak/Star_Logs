@@ -4,6 +4,8 @@ import { Starship } from './Starship'
 class ShipsStore {
     baseUrl = 'https://sandbox.codeworksacademy.com/api/cars'
     ships: Starship[] = []
+    activeStarship: Starship | null = null;
+
 
     constructor() {
         makeAutoObservable(this)

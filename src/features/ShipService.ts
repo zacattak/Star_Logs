@@ -19,9 +19,9 @@ class StarshipService {
         shipsStore.ships = ships
     }
 
-    async getStarship(id) {
-        const response = await shipsApi.get('')
-        shipsStore.currentShip = response.data
+    async getStarship(starshipId: string) {
+        const response = await api.get(`api/starships/${starshipId}`);
+        shipsStore.activeStarship = response.data
         // Handle Fetching crew and logs
     }
 

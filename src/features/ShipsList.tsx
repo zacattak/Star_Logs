@@ -13,7 +13,7 @@ function ShipsList() {
             <div className="container">
                 <div className="row">
                     {
-                        ships.map(s => <div className='col-md-4 my-2'>
+                        ships.map(s => <div className='col-md-4 my-2' key={s.id}>
                             <ShipCard ship={s} />
                         </div>
                         )
