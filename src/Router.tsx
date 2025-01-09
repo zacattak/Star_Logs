@@ -7,6 +7,8 @@ import HomePage from './pages/HomePage.tsx';
 import AboutPage from './pages/AboutPage.tsx';
 import AccountPage from './pages/AccountPage.tsx';
 
+import StarshipPage from './features/ShipDetailPage.tsx';
+
 
 export const router = createHashRouter([
   {
@@ -17,6 +19,10 @@ export const router = createHashRouter([
       {
         path: "",
         element: <HomePage />,
+      },
+      {
+        path: 'starships/:starshipId',
+        element: <StarshipPage />
       },
       {
         path: "about",
