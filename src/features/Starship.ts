@@ -16,6 +16,30 @@ export class Starship {
         // TODO add additional properties if needed
     }
 }
+export class StarshipDetails extends Starship {
+    crewCapacity: number
+    yearCommissioned: string
+    starbaseDocked: string
+    missions: string[]
+    notableFeatures: string[]
+    historicalEvents: string[]
+    weaponSystems: string[]
+    crewCount: number
+    logCount: number
+
+    constructor(data: StarshipDetails) {
+        super(data);
+        this.crewCapacity = data.crewCapacity;
+        this.yearCommissioned = data.yearCommissioned;
+        this.starbaseDocked = data.starbaseDocked;
+        this.missions = data.missions;
+        this.notableFeatures = data.notableFeatures;
+        this.historicalEvents = data.historicalEvents;
+        this.weaponSystems = data.weaponSystems;
+        this.crewCount = data.crewCount;
+        this.logCount = data.logCount;
+    }
+}
 
 // {
 //     "id": 1,

@@ -1,10 +1,15 @@
 import { action, makeAutoObservable } from "mobx"
 import { isValidProp } from "../utils/isValidProp"
-import { Starship } from './Starship'
+import { Starship, StarshipDetails } from './Starship'
+import { CrewMember } from "./CrewMember"
+import { Log } from "./Log"
 class ShipsStore {
     baseUrl = 'https://sandbox.codeworksacademy.com/api/starships'
     ships: Starship[] = []
-    activeStarship: Starship | null = null;
+    // activeStarship: Starship | null = null;
+    activeStarship: StarshipDetails | null = null;
+    starshipCrew: CrewMember[] = [];
+    starshipLogs: Log[] = [];
 
 
     constructor() {

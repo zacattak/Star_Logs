@@ -1,13 +1,13 @@
 import { createHashRouter } from 'react-router-dom';
 import { App } from './App.tsx';
-import { accountService } from './services/AccountService.ts';
+// import { accountService } from './services/AccountService.ts';
 import AuthGuard from './utils/AuthGuard.js';
 import ErrorPage from './pages/ErrorPage.tsx';
 import HomePage from './pages/HomePage.tsx';
 import AboutPage from './pages/AboutPage.tsx';
 import AccountPage from './pages/AccountPage.tsx';
 
-import StarshipPage from './features/ShipDetailPage.tsx';
+import ShipDetailPage from './features/ShipDetailPage.tsx';
 
 
 export const router = createHashRouter([
@@ -22,7 +22,7 @@ export const router = createHashRouter([
       },
       {
         path: 'starships/:starshipId',
-        element: <StarshipPage />
+        element: <ShipDetailPage />
       },
       {
         path: "about",
