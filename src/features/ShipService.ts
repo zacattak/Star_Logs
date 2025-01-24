@@ -32,12 +32,12 @@ class StarshipService {
     }
 
     async getStarshipCrew(starshipId: string) {
-        const response = await api.get(`api/starships/${starshipId}/crew`);
+        const response = await shipsApi.get(`/${starshipId}/crew`);
         shipsStore.starshipCrew = response.data.map((c: CrewMember) => new CrewMember(c));
     }
 
     async getStarshipLogs(starshipId: string) {
-        const response = await api.get(`api/starships/${starshipId}/logs`);
+        const response = await shipsApi.get(`/${starshipId}/logs`);
         shipsStore.starshipLogs = response.data.map((l: Log) => new Log(l));
     }
 
